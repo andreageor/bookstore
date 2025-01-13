@@ -1,9 +1,9 @@
-import style from './style.module.scss';
+import BooksContainer from "../../components/books-container";
+import {booksMockData} from "./books-mock-data.ts";
+
 const BooksPage = () => {
   return (
-    <div>
-      BOOKS PAGE
-    </div>
+    <BooksContainer items={booksMockData}/>
   )
 };
 

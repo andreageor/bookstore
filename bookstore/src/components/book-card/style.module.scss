@@ -1,0 +1,30 @@
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #2bb673;
+  border-radius: 20px;
+  padding: 20px 10px;
+  align-items: center;
+  width: 250px;
+
+  .cardImage {
+    width: 100px;
+    height: 100px;
+  }
+
+  .cardTitle {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  .cardAuthor {
+    margin-top: auto;
+    font-size: 1rem;
+  }
+
+  .addToCartBtn {
+    background: linear-gradient(#ffcd25 0%, #e37330 100%);
+    border: none;
+    width: fit-content;
+  }
+}
