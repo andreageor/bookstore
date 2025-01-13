@@ -57,7 +57,7 @@ const cartSlice = createSlice({
         state.cart.items = state.cart.items.filter(item => item.id !== newItem.id);
       }
       state.cart.totalQuantity--;
-      state.cart.totalPrice-= newItem.price;
+      state.cart.totalPrice = (state.cart.totalPrice - newItem.price).toFixed(2);
     }
   }
 });
