@@ -25,7 +25,7 @@ const Cart = () => {
 
   return (
     <div className={style.cartContainer}>
-      {cartItems.lenght ? cartItems?.map(item => <CartItem item={item}/>) : <p>No items added to the cart</p>}
+      {cartItems.length ? cartItems?.map(item => <CartItem item={item}/>) : <p>No items added to the cart</p>}
       <p>{`Total amount: $${cartTotalPrice}`}</p>
       <Button text='Proceed to Checkout' onClick={onCheckoutClick}/>
     </div>
