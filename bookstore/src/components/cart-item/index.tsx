@@ -21,7 +21,7 @@ const CartItem = ({item}) => {
       </div>
       <div className={style.priceInfo}>
         <p>{`Price: ${item.price}`}</p>
-        <p>{`Total price: ${item.price}`}</p>
+        <p>{`Total price: ${item.totalPrice}`}</p>
       </div>
       <Button text='Remove' onClick={onRemoveClick}/>
     </div>
