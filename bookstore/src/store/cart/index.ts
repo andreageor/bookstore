@@ -33,7 +33,6 @@ const cartSlice = createSlice({
   reducers: {
     addToCart: (state, action) => {
       const newItem = action.payload;
-      console.log(newItem, 'newItem')
       const existingItem = state.cart.items.find(item => item.id === newItem.id);
       if (existingItem) {
         existingItem.quantity++;
@@ -55,7 +54,7 @@ const cartSlice = createSlice({
         existingItem.quantity--;
         existingItem.totalPrice-=newItem.price;
       } else {
-        state.cart.items.filter(item => item.id !== newItem.id);
+        state.cart.items = state.cart.items.filter(item => item.id !== newItem.id);
       }
       state.cart.totalQuantity--;
       state.cart.totalPrice-= newItem.price;
