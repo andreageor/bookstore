@@ -1,15 +1,18 @@
 import style from './style.module.scss';
 import BooksContainer from "../../components/books-container";
-import {booksMockData} from "./books-mock-data.ts";
 import Search from "../../components/search";
 import Cart from "../../components/cart";
+import {useSelector} from "react-redux";
+import {selectBooks} from "../../store/books";
 
 const BooksPage = () => {
+  const books = useSelector(selectBooks);
+
   return (
     <div className={style.root}>
       <div className={style.booksContainer}>
         <Search/>
-        <BooksContainer items={booksMockData}/>
+        <BooksContainer items={books}/>
       </div>
       <Cart/>
     </div>

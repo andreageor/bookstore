@@ -1,13 +1,6 @@
 import BookCard from '../book-card';
 import style from './style.module.scss';
-
-export type Book = {
-  id: number;
-  title: string;
-  author: string;
-  price: number;
-  stock: number;
-}
+import {Book} from "../../store/books";
 
 type BooksContainerProps = {
   items: Book[];
