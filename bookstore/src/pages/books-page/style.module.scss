@@ -1,5 +1,11 @@
 .root {
   display: flex;
-  flex-direction: column;
   gap: 30px;
+
+  .booksContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    flex-basis: 60%;
+  }
 }

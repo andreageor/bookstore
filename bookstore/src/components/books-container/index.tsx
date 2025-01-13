@@ -16,7 +16,7 @@ type BooksContainerProps = {
 const BooksContainer = ({items}: BooksContainerProps) => {
   return (
     <div className={style.cardsContainer}>
-      {items.map(item => <BookCard item={item}/>)}
+      {items.map(item => <BookCard key={item.id} item={item}/>)}
     </div>
   )
 };
